@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 
 export interface GuildType extends mongoose.Document {
     _id: mongoose.Types.ObjectId;
-    guild_id: string;
+    guildId: string;
 }
 
 const guildSchema = new Schema<GuildType>(
     {
-        guild_id: {
+        guildId: {
             type: String,
             required: true,
         }
@@ -17,4 +17,4 @@ const guildSchema = new Schema<GuildType>(
     { timestamps: true }
 );
 
-export const Guild = mongoose.model<GuildType>("Guild", guildSchema);
+export const Guild = mongoose.model<GuildType>("guild", guildSchema);

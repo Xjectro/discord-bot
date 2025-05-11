@@ -1,75 +1,88 @@
-[Jectro Discord](https://discord.gg/zYP8zsuQHM)
+# 🎉 Discord Bot Template 🚀
 
-# 🚀 Discord Bot Template
-
-This project is a template for a Discord bot built using discord.js, TypeScript, and mongoose for MongoDB integration. It includes dynamic event handling and command processing.
-
-## 📋 Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [License](#license)
+A 🔥 **TypeScript** + **discord.js** template to kickstart your Discord bot project in no time! It includes MongoDB integration with Mongoose, command & event handlers, automatic slash command registration, and utility functions.
 
 ## ✨ Features
 
-- Interaction with Discord API using discord.js
-- Type safety with TypeScript
-- MongoDB integration using mongoose
-- Dynamic event handling
-- Custom command processing
-- Logging and notifications
+- ⚡️ Fast setup with TypeScript  
+- 📥 Automatic slash command registration (`registerCommands.ts`)  
+- 🔄 Robust event & command handlers  
+- 🗄️ MongoDB integration via Mongoose  
+- ⏱️ Cooldown mechanism for commands  
+- 🖼️ Dynamic image generation using `node-html-to-image`  
 
-## ⚙️ Installation
+## 🛠️ Requirements
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/deverays/typescript-discord-bot-template.git
-   ```
-2. Install the dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file and add the necessary environment variables:
-   ```env
-   TOKEN=
-   CLIENT_ID=
-   MONGODB_HOST=
-   MONGODB_PORT=
-   MONGODB_DB_NAME=
-   ```
+- Node.js v18 or higher  
+- Bun (optional) or Nodemon  
+- MongoDB connection URI  
+- Discord Bot Token  
 
-## 🛠 Usage
+## 🚀 Installation
 
-To start the server:
+```powershell
+git clone https://github.com/<username>/discord-bot-template.git
+cd discord-bot-template
+# Using npm
+npm install
+# Or with Bun
+bun install
+```
 
-```bash
-npm run dev
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+TOKEN=YOUR_DISCORD_BOT_TOKEN
+MONGODB_URI=YOUR_MONGODB_CONNECTION_STRING
 ```
 
 ## 📂 Project Structure
 
-```bash
-📦 discord-bot-template
- ┣ 📂 src
- ┃ ┣ 📂 commands
- ┃ ┃ ┗ 📂 category
- ┃ ┃   ┗ 📜 command.ts
- ┃ ┣ 📂 database
- ┃ ┃ ┣ 📂 models
- ┃ ┃ ┗ 📜 dbConnection
- ┃ ┣ 📂 utils
- ┃ ┗ 📜 index.ts
- ┣ 📜 .env.example
- ┣ 📜 .gitignore
- ┣ 📜 package.json
- ┣ 📜 README.md
- ┗ 📜 tsconfig.json
 ```
+.
+├─ src  
+│  ├─ commands          # Slash command definitions  
+│  ├─ database  
+│  │  ├─ dbConnection.ts  
+│  │  └─ models         # Mongoose models  
+│  ├─ events            # Discord event handlers  
+│  ├─ handlers          # Custom event & command logic  
+│  ├─ types             # TypeScript type definitions  
+│  └─ utils             # Utility functions (e.g., cooldowns)  
+├─ templates            # HTML templates for image generation  
+├─ nodemon.json         # Nodemon config  
+├─ package.json  
+├─ tsconfig.json  
+└─ README.md  
+```
+
+## ⚙️ Usage
+
+> **Register commands**  
+```powershell
+npm run registerCommands
+```
+
+> **Start development server**  
+```powershell
+npm run dev
+```
+
+> Or with Bun:  
+```powershell
+bun run dev
+```
+
+## 🤝 Contributing
+
+1. Fork the repository 🍴  
+2. Create a new branch (`git checkout -b feature/YourFeature`) 🌿  
+3. Commit your changes (`git commit -m "Add some feature"`) 📝  
+4. Push to the branch (`git push origin feature/YourFeature`) 🚀  
+5. Open a Pull Request 🎉
 
 ## 📄 License
 
-```bash
-I hope this README file clearly describes your project and makes it easier for other developers to understand and contribute! Let me know if you need any further changes or additions.
-```
+This project is licensed under the ISC License. 🚀

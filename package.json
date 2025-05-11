@@ -1,14 +1,13 @@
 {
-  "name": "discord",
+  "name": "discord-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "nodemon",
     "registerCommands": "bun run src/registerCommands.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "xjectro",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
